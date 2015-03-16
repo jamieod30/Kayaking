@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>GKC</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+	    <script type="text/javascript">
+      var clicks = 0;
+        function onClick() {
+          clicks += 1;
+          document.getElementById("clicks").innerHTML = clicks;
+        };
+    </script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Galway Kayak Club</h1>
+      </ion-header-bar>
+      <ion-content>
+		<form id="options">											
+			<h1>GKC</h1>
+			<fieldset>
+				<legend>Members</legend>				
+				<div> 
+					<label>Full Members					
+					<a id="counterFMembers" class="button button-calm">
+						0
+					</a>
+						&nbsp; &nbsp;
+					<a id="-FMembers" class="button button-energized" onclick="incDecFM('-1')">
+						-1
+					</a>
+						&nbsp; &nbsp;					
+					<a id="+FMembers" class="button button-positive" onclick="incDecFM('+1')">
+						+1
+					</a>
+				</label>												
+				</div>	
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Juniours					
+					<a id="counterJuniours" class="button button-calm">
+						0
+					</a>
+						&nbsp; &nbsp;
+					<a id="-Juniours" class="button button-energized" onclick="incDecJuniours('-1')">
+						-1
+					</a>
+						&nbsp; &nbsp;					
+					<a id="+Juniours" class="button button-positive" onclick="incDecJuniours('+1')">
+						+1
+					</a>
+				</label>												
+				</div>					
+				<br>
+			  </fieldset>
+			  <fieldset>
+				<legend>Equipment</legend>				
+				<div> 
+					<label>Polo Helmet										
+						<a id="counterPHelmet" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-PHelmet" class="button button-energized" onclick="incDecPH('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+PHelmet" class="button button-positive" onclick="incDecPH('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>River Helmet										
+						<a id="counterRHelmet" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-RHelmet" class="button button-energized" onclick="incDecRH('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+RHelmet" class="button button-positive" onclick="incDecRH('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>				
+				<div> 
+					<label>Paddle										
+						<a id="counterPaddle" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Paddle" class="button button-energized" onclick="incDecP('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Paddle" class="button button-positive" onclick="incDecP('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Spray Deck										
+						<a id="counterSprayDeck" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-SprayDeck" class="button button-energized" onclick="incDecSD('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+SprayDeck" class="button button-positive" onclick="incDecSD('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Flaker								
+						<a id="counterFlaker" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Flaker" class="button button-energized" onclick="incDecF('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Flaker" class="button button-positive" onclick="incDecF('+1')">
+							+1
+						</a>
+					</label>												
+				</div>		
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>B.A.								
+						<a id="counterBA" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-BA" class="button button-energized" onclick="incDecBA('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+BA" class="button button-positive" onclick="incDecBA('+1')">
+							+1
+						</a>
+					</label>												
+				</div>					
+			  </fieldset>
+			  <fieldset>
+				<legend>Kayak</legend>				
+				<div> 
+					<label>River 										
+						<a id="counterRiver" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-River" class="button button-energized" onclick="incDecRiver('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+River" class="button button-positive" onclick="incDecRiver('+1')">
+							+1
+						</a>
+					</label>												
+				</div>	
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Juniour River										
+						<a id="counterJRiver" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-JRiver" class="button button-energized" onclick="incDecJRiver('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+JRiver" class="button button-positive" onclick="incDecJRiver('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Sea										
+						<a id="counterSea" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Sea" class="button button-energized" onclick="incDecSea('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Sea" class="button button-positive" onclick="incDecSea('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>K boats										
+						<a id="counterKB" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-KB" class="button button-energized" onclick="incDecKB('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+KB" class="button button-positive" onclick="incDecKB('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>K-2s										
+						<a id="counterK2" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-K2" class="button button-energized" onclick="incDecK2('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+K2" class="button button-positive" onclick="incDecK2('+1')">
+							+1
+						</a>
+					</label>												
+				</div>
+					<br>
+					<br>
+					<br>
+				<div> 
+					<label>Polo										
+						<a id="counterPolo" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Polo" class="button button-energized" onclick="incDecPolo('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Polo" class="button button-positive" onclick="incDecPolo('+1')">
+							+1
+						</a>
+					</label>												
+				</div>	
+			  </fieldset>
+			  <fieldset>
+				<legend>Miscellaneous</legend>				
+				<div> 
+					<label>Throw Rope
+						<a id="counterThrow" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-ThrowRope" class="button button-energized" onclick="incDecThrow('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+ThrowRope" class="button button-positive" onclick="incDecThrow('+1')">
+							+1
+						</a>
+					</label>
+				</div>
+					<br>
+					<br>
+					<br>
+				<div>
+					<label>Tow Rope										
+						<a id="counterTow" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Tow" class="button button-energized" onclick="incDecTow('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Tow" class="button button-positive" onclick="incDecTow('+1')">
+							+1
+						</a>
+					</label>
+				</div>	
+					<br>
+					<br>
+					<br>
+				<div>
+					<label>Compass										
+						<a id="counterCompass" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Compass" class="button button-energized" onclick="incDecC('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Compass" class="button button-positive" onclick="incDecC('+1')">
+							+1
+						</a>
+					</label>
+				</div>	
+					<br>
+					<br>
+					<br>
+				<div>
+					<label>										
+						<a id="counterCompass" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Compass" class="button button-energized" onclick="incDecC('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Compass" class="button button-positive" onclick="incDecC('+1')">
+							+1
+						</a>
+					</label>
+				</div>
+					<br>
+					<br>
+					<br>
+				<div>
+					<label>										
+						<a id="counterCompass" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Compass" class="button button-energized" onclick="incDecC('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Compass" class="button button-positive" onclick="incDecC('+1')">
+							+1
+						</a>
+					</label>
+				</div>
+					<br>
+					<br>
+					<br>
+				<div>
+					<label>										
+						<a id="counterCompass" class="button button-calm">
+							0
+						</a>
+							&nbsp; &nbsp;
+						<a id="-Compass" class="button button-energized" onclick="incDecC('-1')">
+							-1
+						</a>
+							&nbsp; &nbsp;					
+						<a id="+Compass" class="button button-positive" onclick="incDecC('+1')">
+							+1
+						</a>
+					</label>
+				</div>	
+			  </fieldset>
+			</form> 
+				<br>
+				<br>
+						<a id="Reset" class="button button-assertive" onclick = "reset()">
+							Reset
+						</a>
+						&nbsp; &nbsp;
+						<a id="Return" class="button button-assertive">
+							Return
+						</a>
+							&nbsp; &nbsp;
+						<a id="Check-out" class="button button-assertive">
+							Check-out
+						</a>				
+      </ion-content>
+    </ion-pane>
+<!--	    <script type="text/javascript">
+			var showHideFieldSet = function () {
+				if (fieldset1.isVisible()) {
+					fieldset1.hide();
+				}
+				else {
+					fieldset1.show();
+				}
+			}
+		</script>		-->
+	        <script type="text/javascript">
+
+          function incDecFM (plusMinus){
+            var plusMinus = parseInt (plusMinus);
+            var currentMembers = parseInt (document.getElementById("counterFMembers").innerHTML)+ plusMinus;
+            document.getElementById("counterFMembers").innerHTML = currentMembers;
+          }
+        </script>
+		        <script type="text/javascript">
+
+          function reset(){
+            document.getElementById("counterFMembers").innerHTML = 0;
+            document.getElementById("counterJuniours").innerHTML = 0;
+            document.getElementById("counterPHelmet").innerHTML = 0;
+            document.getElementById("counterRHelmet").innerHTML = 0;
+            document.getElementById("counterPaddle").innerHTML = 0;
+            document.getElementById("counterSprayDeck").innerHTML = 0;
+            document.getElementById("counterFlaker").innerHTML = 0;
+            document.getElementById("counterBA").innerHTML = 0;
+            document.getElementById("counterRiver").innerHTML = 0;
+            document.getElementById("counterJRiver").innerHTML = 0;
+            document.getElementById("counterSea").innerHTML = 0;
+            document.getElementById("counterKB").innerHTML = 0;
+            document.getElementById("counterK2").innerHTML = 0;
+            document.getElementById("counterPolo").innerHTML = 0;
+            document.getElementById("counterThrow").innerHTML = 0;
+            document.getElementById("counterTow").innerHTML = 0;
+            document.getElementById("counterCompass").innerHTML = 0;
+            document.getElementById("").innerHTML = 0;			
+          }
+        </script>					
+  </body>
+</html>

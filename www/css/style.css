@@ -1,0 +1,57 @@
+/**/
+Body {
+    padding: 20px 30px 20px 30px;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+label {
+    font-family: "Lucida Grande", Tahoma;
+	font-size: 10px;
+	font-weight: lighter;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #666666;
+    margin-top: 10px;
+	text-align: center!important;
+	letter-spacing: 0.3em;
+	margin-top:0;
+}
+legend {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+	color: #444;
+	margin: 0;
+	padding: 0px 0px 6px 0px;
+	font-size: 30px;
+	line-height: 44px;
+	letter-spacing: -2px;
+	font-weight: bold;
+	margin-left:0px;
+	border-left:none;
+	border-right:none;
+	border-top: solid;
+	border-bottom: solid;
+}
+h1 {
+    padding: 0px 0px 10px 40px;
+    display: block;
+    margin: -10px -30px 30px -30px;
+}
+.button {
+    font-weight: bold;
+    box-shadow: 1px 1px 1px #3D3D3D;
+    float:right;
+	margin-right: 3px;
+	margin-left: 5px;
+}
+fieldset {
+	border:none;
+}
+.GKC {
+width: 100px;
+height: 14px;
+background: url('../img/GKC.jpeg') no-repeat transparent;
+}
+/**/
